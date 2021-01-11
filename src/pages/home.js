@@ -4,9 +4,9 @@ import {
     Route, withRouter,
     useRouteMatch,
 } from 'react-router-dom';
-import ColorBox from '../colorBox/colorBox';
-import TodoListPage from '../../pages/todoListPage';
-import TitleParamPage from '../../pages/titleParamPage';
+import ColorBox from '../components/colorBox/colorBox';
+import TodoListPage from './todoListPage';
+import TitleParamPage from './titleParamPage';
 import { Grid, Menu, Segment } from 'semantic-ui-react';
 
 function Home(props) {
@@ -15,15 +15,14 @@ function Home(props) {
     const [activeItem, setActiveItem] = useState('none')
 
     const handleItemClick = (e, { name }) => {
-        console.log('props', props)
         if (name === 'param') {
             props.history.push(`${match.url}/param/:${param}:${param}`)
         }
-        else if (name === 'colorbox') {
-            props.history.push(`${match.url}/colorbox`)
+        else if (name === 'colorBox') {
+            props.history.push(`${match.url}/colorBox`)
         }
         else {
-            props.history.push(`${match.url}/todoListBage`)
+            props.history.push(`${match.url}/todoListPage`)
         }
         setActiveItem(name)
     }
@@ -39,29 +38,29 @@ function Home(props) {
                         {/* <NavLink to={`${match.url}/param/:${param}:${param}`}>Title Param</NavLink > */}
                     </Menu.Item>
                     <Menu.Item
-                        name='colorbox'
-                        active={activeItem === 'colorbox'}
+                        name='colorBox'
+                        active={activeItem === 'colorBox'}
                         onClick={handleItemClick}
                     >
-                        {/* <NavLink to={`${match.url}/colorbox`}>ColorBox</NavLink > */}
+                        {/* <NavLink to={`${match.url}/colorBox`}>ColorBox</NavLink > */}
                     </Menu.Item>
-                    <Menu.Item name='todoListBage'
-                        active={activeItem === 'todoListBage'}
+                    <Menu.Item name='todoListPage'
+                        active={activeItem === 'todoListPage'}
                         onClick={handleItemClick}>
-                        {/* <Link to={`${match.url}/todoListBage`}>TodoListPage</Link> */}
+                        {/* <Link to={`${match.url}/todoListPage`}>TodoListPage</Link> */}
                     </Menu.Item>
                 </Menu>
             </Grid.Column>
             <Grid.Column width={12}>
                 <Segment attached='bottom'>
                     <Switch>
-                        <Route path={`${match.path}/colorbox`}>
+                        <Route path={`${match.path}/colorBox`}>
                             <ColorBox />
                         </Route>
                         <Route path={`${match.path}/param/:topicId:topic`}>
                             <TitleParamPage />
                         </Route>
-                        <Route path={`${match.path}/todoListBage`}>
+                        <Route path={`${match.path}/todoListPage`}>
                             <TodoListPage></TodoListPage>
                         </Route>
                         <Route path={match.path}>

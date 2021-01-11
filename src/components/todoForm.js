@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import * as actions from '../../actions/index';
+import * as actions from '../actions/index';
 import { connect } from 'react-redux';
 import { Button, Grid, Form, Divider, Input } from 'semantic-ui-react'
 import styled from "styled-components";

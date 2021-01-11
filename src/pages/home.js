@@ -8,6 +8,7 @@ import ColorBox from '../components/colorBox/colorBox';
 import TodoListPage from './todoListPage';
 import TitleParamPage from './titleParamPage';
 import { Grid, Menu, Segment } from 'semantic-ui-react';
+import firebase from 'firebase';
 
 function Home(props) {
     let match = useRouteMatch();
@@ -20,6 +21,10 @@ function Home(props) {
         }
         else if (name === 'colorBox') {
             props.history.push(`${match.url}/colorBox`)
+        }
+        else if (name === 'logout') {
+            firebase.auth().signOut()
+            props.history.push('/login')
         }
         else {
             props.history.push(`${match.url}/todoListPage`)
@@ -48,6 +53,10 @@ function Home(props) {
                         active={activeItem === 'todoListPage'}
                         onClick={handleItemClick}>
                         {/* <Link to={`${match.url}/todoListPage`}>TodoListPage</Link> */}
+                    </Menu.Item>
+                    <Menu.Item name='logout'
+                        active={activeItem === 'logout'}
+                        onClick={handleItemClick}>
                     </Menu.Item>
                 </Menu>
             </Grid.Column>

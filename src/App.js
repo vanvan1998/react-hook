@@ -13,20 +13,14 @@ import { Grid } from 'semantic-ui-react';
 import Login from './pages/login';
 import firebase from 'firebase';
 import { useEffect } from 'react';
-import { useHistory } from "react-router-dom";
-
-// Configure Firebase.
-const config = {
-  apiKey: process.env.REACT_APP_API_KEY_CONFIG,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  // ...
-};
+import { config } from './firebase/config'
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
 } else {
-  firebase.app(); // if already initialized, use that one
+  firebase.app();
 }
+
 const axios = require('axios');
 axios.defaults.baseURL = 'http://js-post-api.herokuapp.com/api';
 
@@ -42,7 +36,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 };
 
 function App() {
-  const history = useHistory();
+
   //handle firebase
   useEffect(() => {
     const unregisterAuthObserver = firebase.auth().onAuthStateChanged(async user => {
@@ -77,12 +71,6 @@ function App() {
                 </li>
                 <li>
                   <Link to="/clock">Clock</Link>
-                </li>
-                <li>
-                  <button onClick={() => {
-                    // firebase.auth().signOut()
-                    console.log(history)
-                  }}>Sign-out</button>
                 </li>
               </ul>
             </nav>

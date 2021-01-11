@@ -1,0 +1,12 @@
+.clock2 {
+    border-radius: 8px;
+    width: 500px;
+    border: 1px solid #8d3232;
+    text-align: center;
+
+    transition: all 0.5s ease-in-out 0s;
+}
+.clock2 ._time {
+    color: chocolate;
+    font-size: 70px;
+}

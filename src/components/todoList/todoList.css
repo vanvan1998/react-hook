@@ -1,0 +1,12 @@
+.todo-list {
+}
+
+.todo-item {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    transition: all 1s ease-in-out 0s;
+    cursor: pointer;
+}

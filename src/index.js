@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './modules/App';
 import reportWebVitals from './reportWebVitals';
-import store from './store/index';
+import store from './core/store';
 import { Provider } from 'react-redux';
 import 'semantic-ui-css/semantic.min.css'
 

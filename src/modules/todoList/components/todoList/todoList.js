@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import * as actions from "../../actions/index";
-import { connect } from 'react-redux';
 import styled from "styled-components";
 
 const Title = styled.li`
@@ -34,16 +32,4 @@ function TodoList(props) {
     );
 }
 
-const mapStateToProps = state => {
-    return ({ todoList: state.todoList.todoList })
-};
-const mapDispatchToProps = dispatch => {
-    return {
-        GetListTodoAction: () => dispatch(actions.todoListAction.GetListTodoAction()),
-        DeleteTodoAction: (todo) => dispatch(actions.todoListAction.DeleteTodoAction(todo)),
-    }
-}
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(TodoList);
+export default TodoList;

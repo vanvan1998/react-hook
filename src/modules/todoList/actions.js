@@ -1,4 +1,4 @@
-import * as constants from '../constants';
+import * as constants from './actionTypes';
 
 export const GetListTodoAction = () => ({
     type: constants.GET_LIST_TO_DO,
@@ -28,6 +28,3 @@ export const GetListSearchTodoSuccessAction = (todoList) => ({
     type: constants.GET_LIST_SEARCH_TO_DO_SUCCESS,
     data: { todoList }
 });
-
-
-// export { GetListTodoAction, GetListTodoSuccessAction, AddTodoAction, DeleteTodoAction, SearchTodoAction, GetListSearchTodoSuccessAction }

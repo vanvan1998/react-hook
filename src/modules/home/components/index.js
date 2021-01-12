@@ -4,9 +4,9 @@ import {
     Route, withRouter,
     useRouteMatch,
 } from 'react-router-dom';
-import ColorBox from '../components/colorBox/colorBox';
-import TodoListPage from './todoListPage';
-import TitleParamPage from './titleParamPage';
+import ColorBox from '../../share/colorBox/colorBox';
+import TodoListPage from '../../todoList';
+import TitleParamPage from '../../titleParam';
 import { Grid, Menu, Segment } from 'semantic-ui-react';
 import firebase from 'firebase';
 

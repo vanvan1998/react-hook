@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import * as constants from '../constants';
-import { GetListTodoSuccessAction, GetListSearchTodoSuccessAction } from '../actions/todoListAction';
+import * as constants from './actionTypes';
+import { GetListTodoSuccessAction, GetListSearchTodoSuccessAction } from './actions';
 
 const axios = require('axios');
 

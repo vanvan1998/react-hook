@@ -1,4 +1,4 @@
-import * as constants from '../constants';
+import * as constants from './actionTypes';
 
 const initialState = { todoList: null };
 

@@ -5,10 +5,10 @@ import TodoList from './todoList/todoList';
 function TodoListPage(props) {
     return (
         <div>
-            <TodoForm AddTodoAction={props.AddTodoAction}></TodoForm>
+            <TodoForm addTodoAction={props.addTodoAction} searchTodoAction={props.searchTodoAction}></TodoForm>
             <TodoList todoList={props.todoList}
-                GetListTodoAction={props.GetListTodoAction}
-                DeleteTodoAction={props.DeleteTodoAction}></TodoList>
+                getListTodoAction={props.getListTodoAction}
+                deleteTodoAction={props.deleteTodoAction}></TodoList>
         </div>
     );
 }

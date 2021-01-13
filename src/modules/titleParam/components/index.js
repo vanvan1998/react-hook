@@ -13,7 +13,7 @@ function TitleParamPage(props) {
     }
 
     function handleCallPostAPI() {
-        props.PostLoginAction('vanvan', '123456')
+        props.postLoginAction('vanvan', '123456')
     }
 
     // return <Redirect to="/home" />

@@ -2,7 +2,7 @@ import * as constants from './actionTypes';
 
 const initialState = { todoList: null };
 
-const TodoListReducer = (state = initialState, action) => {
+const todoListReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants.GET_LIST_TO_DO_SUCCESS: {
             var data = JSON.parse(localStorage.getItem('todoList'))
@@ -35,4 +35,4 @@ const TodoListReducer = (state = initialState, action) => {
     }
 };
 
-export default TodoListReducer;
+export default todoListReducer;

@@ -6,11 +6,14 @@ const axios = require('axios');
 class SignInDAO {
 
     static POSTLoginAPI = (username: string, password: string) => {
-        return axios.post(`/auth/login`, { username, password }).then((res: { data: { username: string; password: string; token: string; }; }) => {
-            return new UserDTO(res.data.username, res.data.password, res.data.token)
-        }
-        )
-        .catch((e: { data: ErrorDTO; }) => new ErrorDTO(e.data))
+        return axios.post(`/auth/login`, { username, password })
+            .then((res: { data: { username: string; password: string; token: string; }; }) => {
+                return new UserDTO(res.data.username, res.data.password, res.data.token)
+            })
+            .catch((e: { data: ErrorDTO; }) => {
+                console.log('dao', typeof e)
+                return new ErrorDTO(e.data)
+            })
     };
 }
 

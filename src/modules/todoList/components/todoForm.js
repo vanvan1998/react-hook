@@ -19,14 +19,13 @@ ButtonCustomer.defaultProps = {
 const ReversedButton = props => <Button {...props} children={props.content.split(' ')} />
 
 function TodoForm(props) {
-  // const dispatch = useDispatch()
   const [value, setValue] = useState('')
   const [valueSearch, setValueSearch] = useState('')
   const typingTimeoutRef = useRef(null)
 
   function handleSubmitAdd(e) {
     e.preventDefault()
-    props.AddTodoAction(value)
+    props.addTodoAction(value)
     setValue('')
   }
 
@@ -39,7 +38,7 @@ function TodoForm(props) {
     }
 
     typingTimeoutRef.current = setTimeout(() => {
-      props.SearchTodoAction(valueTemp)
+      props.searchTodoAction(valueTemp)
     }, 300);
 
   }
@@ -56,7 +55,7 @@ function TodoForm(props) {
         </Grid.Column>
         <Grid.Column>
           <ButtonCustomer primary as={ReversedButton} inputColor='white' icon='add' content='Add Todo' onClick={() => {
-            props.AddTodoAction(value)
+            props.addTodoAction(value)
           }}></ButtonCustomer>
         </Grid.Column>
       </Grid>

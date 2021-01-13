@@ -1,30 +1,30 @@
 import * as constants from './actionTypes';
 
-export const GetListTodoAction = () => ({
+export const getListTodoAction = () => ({
     type: constants.GET_LIST_TO_DO,
 });
 
-export const GetListTodoSuccessAction = (todoList) => ({
+export const getListTodoSuccessAction = (todoList) => ({
     type: constants.GET_LIST_TO_DO_SUCCESS,
     data: { todoList }
 });
 
-export const DeleteTodoAction = (todo) => ({
+export const deleteTodoAction = (todo) => ({
     type: constants.DELETE_TO_DO,
     data: { todo }
 });
 
-export const AddTodoAction = (todo) => ({
+export const addTodoAction = (todo) => ({
     type: constants.ADD_TO_DO,
     data: { todo }
 });
 
-export const SearchTodoAction = (search) => ({
+export const searchTodoAction = (search) => ({
     type: constants.SEARCH_TO_DO,
     data: { search }
 });
 
-export const GetListSearchTodoSuccessAction = (todoList) => ({
+export const getListSearchTodoSuccessAction = (todoList) => ({
     type: constants.GET_LIST_SEARCH_TO_DO_SUCCESS,
     data: { todoList }
 });

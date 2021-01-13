@@ -8,10 +8,10 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        AddTodoAction: (value) => dispatch(actions.AddTodoAction(value)),
-        SearchTodoAction: (valueTemp) => dispatch(actions.SearchTodoAction(valueTemp)),
-        GetListTodoAction: () => dispatch(actions.GetListTodoAction()),
-        DeleteTodoAction: (todo) => dispatch(actions.DeleteTodoAction(todo)),
+        addTodoAction: (value) => dispatch(actions.addTodoAction(value)),
+        searchTodoAction: (valueTemp) => dispatch(actions.searchTodoAction(valueTemp)),
+        getListTodoAction: () => dispatch(actions.getListTodoAction()),
+        deleteTodoAction: (todo) => dispatch(actions.deleteTodoAction(todo)),
     }
 }
 export default connect(

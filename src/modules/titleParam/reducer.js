@@ -2,7 +2,7 @@ import * as constants from './actionTypes';
 
 const initialState = { data: '' };
 
-const TodoListReducer = (state = initialState, action) => {
+const titleParamReducer = (state = initialState, action) => {
     switch (action.type) {
         case constants.GET_TOKEN_SUCCESS: {
             if (action.data) {
@@ -14,10 +14,11 @@ const TodoListReducer = (state = initialState, action) => {
             } else return { data: '' }
         }
         case constants.SHOW_ERROR: {
+            console.log(action.data)
             if (action.data) {
                 return {
                     ...state,
-                    data: action.data.toString(),
+                    data: action.data.message,
                 };
             } else return { data: '' }
         }
@@ -26,4 +27,4 @@ const TodoListReducer = (state = initialState, action) => {
     }
 };
 
-export default TodoListReducer;
+export default titleParamReducer;

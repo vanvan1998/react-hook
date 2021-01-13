@@ -13,13 +13,13 @@ function TodoList(props) {
 
     useEffect(() => {
         if (!todoList) {
-            props.GetListTodoAction()
+            props.getListTodoAction()
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [todoList])
 
     function handleTodoListClick(todo) {
-        props.DeleteTodoAction(todo)
+        props.deleteTodoAction(todo)
     }
 
     return (

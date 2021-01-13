@@ -7,7 +7,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        PostLoginAction: (username,password) => dispatch(actions.PostLoginAction(username,password)),
+        postLoginAction: (username, password) => dispatch(actions.postLoginAction(username, password)),
     }
 }
 export default connect(

@@ -3,7 +3,6 @@ import TodoForm from './todoForm';
 import TodoList from './todoList/todoList';
 
 function TodoListPage(props) {
-    console.log(props)
     return (
         <div>
             <TodoForm AddTodoAction={props.AddTodoAction}></TodoForm>

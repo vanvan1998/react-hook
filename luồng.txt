@@ -1,0 +1,23 @@
+View -> dispatch(action) -> Saga (handle logic )
+
+// userDTO = call(services.signIn, email, pass) => đẩy qua services
+// userDTO parse => Object with User type => const user = ...
+// if (userDTO typeOf ErrorDTO) => handle Err => end task
+
+// else
+// allowed = call(services.checkPermission, user)
+// if (allowed) call(services.checkUserStatus, user)
+// else end
+
+// put(success(user)) => reducer
+
+
+Reducer
+case success:
+return { user } // user này được định dạng bằng 1 cái type sử dụng type script
+
+Viewer: 
+user > render UI
+
+//tần services là tần xử lý tất cả kể cả lưu vào local, tần saga chỉ phân luồng dữ liệu
+// dao nhận dữ liệu từ server trả về và kết quả là một object có kiểu là DTO

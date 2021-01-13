@@ -14,7 +14,8 @@ import './App.css';
 import PrivateRoute from './privateRoute';
 
 const axios = require('axios');
-axios.defaults.baseURL = 'http://js-post-api.herokuapp.com/api';
+// axios.defaults.baseURL = 'http://js-post-api.herokuapp.com/api';
+axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
 

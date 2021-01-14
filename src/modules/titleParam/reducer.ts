@@ -1,24 +1,27 @@
-import * as constants from './actionTypes';
+import { TitleParamState, TitleParam, GET_TOKEN_SUCCESS, SHOW_ERROR } from './actionTypes';
 
-const initialState = { data: '' };
+const initialState: TitleParamState = {
+    username: '',
+    password: '',
+    token: '',
+    error: ''
+};
 
-const titleParamReducer = (state = initialState, action) => {
+const titleParamReducer = (state = initialState, action: TitleParam) => {
     switch (action.type) {
-        case constants.GET_TOKEN_SUCCESS: {
+        case GET_TOKEN_SUCCESS: {
             if (action.data) {
-                console.log(action.data)
                 return {
                     ...state,
-                    data: action.data.data.token,
+                    token: action.data.token,
                 };
             } else return { data: '' }
         }
-        case constants.SHOW_ERROR: {
-            console.log(action.data)
+        case SHOW_ERROR: {
             if (action.data) {
                 return {
                     ...state,
-                    data: action.data.message,
+                    error: action.data,
                 };
             } else return { data: '' }
         }

@@ -13,15 +13,16 @@ function TitleParamPage(props) {
     }
 
     function handleCallPostAPI() {
-        props.postLoginAction('vanvan', '123456')
+        props.postLogin('vanvan', '123456')
     }
 
     // return <Redirect to="/home" />
 
     return <div>
-        <h3>Requested topic ID: {param.topicId}   {param.topic}</h3>
-        <h3>data: {props.data}</h3>
-        <button onClick={handleGoToHome}>Go to home</button>
+        <h3>Requested topic ID: {param.topicId}  {param.topic}</h3>
+        <h3>data: {props.token}</h3>
+        <h3>error: {props.error}</h3>
+ <button onClick={handleGoToHome}>Go to home</button>
         <button onClick={handleCallPostAPI}>Call login API</button>
 
     </div >

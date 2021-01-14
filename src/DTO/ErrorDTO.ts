@@ -1,8 +1,8 @@
 class ErrorDTO {
     message: string;
 
-    constructor(errorDTO: ErrorDTO) {
-        this.message = errorDTO.message;
+    constructor(message: string) {
+        this.message = message;
     }
 
     toJSON() {

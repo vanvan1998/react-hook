@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are 3 items 1`] = `
+<ul>
+  <li>
+    Shark
+  </li>
+  <li>
+    Dolphin
+  </li>
+  <li>
+    Octopus
+  </li>
+</ul>
+`;
+
+exports[`renders correctly when there are no items 1`] = `
+<span>
+  No items in list
+</span>
+`;

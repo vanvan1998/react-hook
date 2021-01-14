@@ -12,18 +12,16 @@ import Login from '../../login/components';
 import TodoListPage from '../../../modules/todoList';
 import './App.css';
 import PrivateRoute from './privateRoute';
-
 const axios = require('axios');
 // axios.defaults.baseURL = 'http://js-post-api.herokuapp.com/api';
 axios.defaults.baseURL = 'http://localhost:3001/';
 
 function App() {
-
     useEffect(() => {
         const unregisterAuthObserver = AuthenticationService.onAuthStateChanged()
         return () => unregisterAuthObserver();
     }, [])
-
+    
     return (
         <div className="app">
             <Router>

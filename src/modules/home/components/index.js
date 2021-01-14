@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import ColorBox from '../../share/colorBox/colorBox';
 import TodoListPage from '../../todoList';
-import TitleParamPage from '../../titleParam';
+import TitleParamPage from '../../titleParam/index';
 import { Grid, Menu, Segment } from 'semantic-ui-react';
 import firebase from 'firebase';
 

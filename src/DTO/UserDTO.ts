@@ -3,12 +3,6 @@ class UserDTO {
     password: string;
     token: string;
 
-    // constructor(userDTO: UserDTO) {
-    //     this.username = userDTO.username;
-    //     this.password = userDTO.password;
-    //     this.token = userDTO.token;
-    // }
-
     constructor(username: string, password: string, token: string) {
         this.username = username;
         this.password = password;
